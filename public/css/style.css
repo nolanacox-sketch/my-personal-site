@@ -172,13 +172,13 @@ img {
    Hero
    ========================================================================== */
 .hero {
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6em 1.5em 1em;
+  padding: 6em 1.5em 3em;
   position: relative;
 }
 
@@ -206,10 +206,8 @@ img {
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 2.5em;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: 2.5em auto 0;
   width: 26px;
   height: 42px;
   border: 2px solid var(--ocean-jade);
