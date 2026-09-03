@@ -182,6 +182,16 @@ img {
   position: relative;
 }
 
+.hero-photo {
+  width: clamp(120px, 16vw, 180px);
+  height: clamp(120px, 16vw, 180px);
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5em;
+  border: 4px solid var(--sunrise-gold);
+  box-shadow: 0 8px 24px rgba(27, 75, 90, 0.18);
+}
+
 .hero-name {
   font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 700;
