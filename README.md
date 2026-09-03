@@ -40,11 +40,12 @@ retheme the whole site by changing a few hex codes.
 
 ## Adding your own photos
 
-The Photos section reads three images directly from `public/photos/`:
+The Photos section reads images directly from `public/photos/`:
 
 - `photo1.jpg`
 - `photo2.jpg`
 - `photo3.jpg`
+- `photo4.jpg`
 
 To use your own photos, just replace those files with your own images,
 **keeping the same filenames**. If you want to add more photos or rename
