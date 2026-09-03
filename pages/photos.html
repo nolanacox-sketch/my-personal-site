@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos — Nolan Cox</title>
+  <meta name="description" content="Photos of Nolan Cox" />
+
+  <!-- Google Fonts: Fraunces (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+
+  <!-- ===== Nav Bar ===== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">Nolan Cox</a>
+      <nav class="navbar-links">
+        <a href="/about">About</a>
+        <a href="/background">Background</a>
+        <a href="/resume">Resume</a>
+        <a href="/photos" class="active">Photos</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Photos ===== -->
+    <section class="section section-alt">
+      <div class="section-inner fade-in-up">
+        <h2>Photos</h2>
+        <p>A few snapshots — click any photo to view it larger.</p>
+        <div class="photo-grid">
+          <button class="photo-item" data-full="/images/photo2.jpg">
+            <img src="/images/photo2.jpg" alt="In the mountains" loading="lazy" />
+          </button>
+          <button class="photo-item" data-full="/images/photo3.jpg">
+            <img src="/images/photo3.jpg" alt="By the lake" loading="lazy" />
+          </button>
+          <button class="photo-item" data-full="/images/photo4.jpg">
+            <img src="/images/photo4.jpg" alt="At a wedding" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Nolan Cox. Built with Node.js &amp; Express.</p>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

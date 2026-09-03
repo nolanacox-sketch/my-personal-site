@@ -168,6 +168,11 @@ img {
   color: var(--sunrise-gold);
 }
 
+.navbar-links a.active {
+  color: var(--sunrise-gold);
+  font-weight: 700;
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
@@ -205,31 +210,12 @@ img {
   margin: 0 auto;
 }
 
-.scroll-indicator {
-  display: block;
-  margin: 2.5em auto 0;
-  width: 26px;
-  height: 42px;
-  border: 2px solid var(--ocean-jade);
-  border-radius: 999px;
-}
-
-.scroll-indicator span {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  margin-left: -2.5px;
-  border-radius: 50%;
-  background: var(--sandal-orange);
-  animation: scroll-dot 1.6s ease-in-out infinite;
-}
-
-@keyframes scroll-dot {
-  0% { top: 8px; opacity: 1; }
-  70% { top: 22px; opacity: 0; }
-  100% { top: 22px; opacity: 0; }
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2.5em;
 }
 
 /* ==========================================================================
@@ -240,7 +226,6 @@ img {
 }
 
 #about {
-  padding-top: 2em;
   text-align: center;
 }
 
