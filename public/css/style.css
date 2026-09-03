@@ -375,22 +375,9 @@ img {
    Contact
    ========================================================================== */
 .contact-links {
-  margin-bottom: 1.5em;
-}
-
-.social-links {
   display: flex;
-  gap: 1.5em;
+  gap: 1em;
   flex-wrap: wrap;
-}
-
-.social-links a {
-  font-weight: 600;
-  color: var(--deep-ocean);
-}
-
-.social-links a:hover {
-  color: var(--sandal-orange);
 }
 
 /* ==========================================================================
