@@ -15,6 +15,18 @@
   />
 
   <link rel="stylesheet" href="/css/style.css" />
+
+  <script>
+    // Always open the page at the top, even if the browser tries to
+    // restore a previous scroll position or the URL has a leftover #hash.
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
 </head>
 <body>
 
