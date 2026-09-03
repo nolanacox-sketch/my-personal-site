@@ -1,0 +1,415 @@
+/* ==========================================================================
+   Tropical Jade Sunrise — color palette
+   ========================================================================== */
+:root {
+  --sand-cream: #FBF3E7;
+  --warm-ink: #2E2A24;
+  --ocean-jade: #1F6F6A;
+  --deep-ocean: #1B4B5A;
+  --sandal-orange: #D98E52;
+  --sunrise-gold: #F2B872;
+
+  --gradient-sunrise: linear-gradient(90deg, var(--sandal-orange), var(--sunrise-gold));
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ==========================================================================
+   Reset & base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--sand-cream);
+  color: var(--warm-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ocean-jade);
+  margin: 0 0 0.5em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: var(--warm-ink);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--sandal-orange);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--deep-ocean);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Gradient accent text & buttons
+   ========================================================================== */
+.gradient-text {
+  background: var(--gradient-sunrise);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85em 1.8em;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-gradient {
+  background: var(--gradient-sunrise);
+  color: var(--warm-ink);
+}
+
+.btn-gradient:hover {
+  color: var(--warm-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(217, 142, 82, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--ocean-jade);
+  color: var(--ocean-jade);
+}
+
+.btn-outline:hover {
+  background: var(--ocean-jade);
+  color: var(--sand-cream);
+}
+
+/* ==========================================================================
+   Nav bar
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--ocean-jade);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.9em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--sand-cream);
+}
+
+.navbar-logo:hover {
+  color: var(--sunrise-gold);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.6em;
+  flex-wrap: wrap;
+}
+
+.navbar-links a {
+  color: var(--sand-cream);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--sunrise-gold);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6em 1.5em 3em;
+  position: relative;
+}
+
+.hero-photo {
+  width: clamp(120px, 16vw, 180px);
+  height: clamp(120px, 16vw, 180px);
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5em;
+  border: 4px solid var(--sunrise-gold);
+  box-shadow: 0 8px 24px rgba(27, 75, 90, 0.18);
+}
+
+.hero-name {
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  color: var(--warm-ink);
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+.scroll-indicator {
+  display: block;
+  margin: 2.5em auto 0;
+  width: 26px;
+  height: 42px;
+  border: 2px solid var(--ocean-jade);
+  border-radius: 999px;
+}
+
+.scroll-indicator span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--sandal-orange);
+  animation: scroll-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-dot {
+  0% { top: 8px; opacity: 1; }
+  70% { top: 22px; opacity: 0; }
+  100% { top: 22px; opacity: 0; }
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+.section {
+  padding: 6em 1.5em;
+}
+
+#about {
+  padding-top: 2em;
+  text-align: center;
+}
+
+.section-alt {
+  background: rgba(31, 111, 106, 0.05);
+}
+
+.section-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Scroll-reveal animation
+   ========================================================================== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Background timeline
+   ========================================================================== */
+.timeline-item {
+  padding: 1.2em 0 1.2em 1.5em;
+  border-left: 3px solid var(--sunrise-gold);
+  margin-bottom: 0.5em;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sandal-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4em;
+}
+
+/* ==========================================================================
+   Resume highlights
+   ========================================================================== */
+.highlights {
+  margin-top: 2em;
+}
+
+.highlights li {
+  padding: 0.6em 0;
+  border-bottom: 1px solid rgba(46, 42, 36, 0.1);
+}
+
+/* ==========================================================================
+   Photo grid
+   ========================================================================== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2em;
+  margin-top: 2em;
+}
+
+.photo-item {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 16px rgba(27, 75, 90, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(27, 75, 90, 0.2);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Lightbox
+   ========================================================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(27, 27, 24, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  background: none;
+  border: none;
+  color: var(--sand-cream);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  color: var(--sunrise-gold);
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact-links {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background: var(--ocean-jade);
+  color: var(--sand-cream);
+  text-align: center;
+  padding: 2em 1.5em;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 640px) {
+  .navbar-inner {
+    flex-direction: column;
+    gap: 0.6em;
+  }
+
+  .navbar-links {
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .section {
+    padding: 4em 1.2em;
+  }
+}
