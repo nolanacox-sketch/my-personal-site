@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Personal Site</title>
+  <meta name="description" content="Personal website of Your Name" />
+
+  <!-- Google Fonts: Fraunces (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Nav Bar ===== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">Your Name</a>
+      <nav class="navbar-links">
+        <a href="#about">About</a>
+        <a href="#background">Background</a>
+        <a href="#resume">Resume</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-content fade-in-up">
+        <h1 class="hero-name gradient-text">Your Name</h1>
+        <p class="hero-tagline">A one-line tagline about what you do and what you love.</p>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="section-inner fade-in-up">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Your Name — replace this paragraph with a short introduction about
+          who you are, what you're passionate about, and what brings you here. Keep it
+          warm and conversational, like you're talking to a friend.
+        </p>
+        <p>
+          This is a second paragraph. Talk about what you're currently working on,
+          what excites you professionally or personally, and anything else you'd like
+          visitors to know about you.
+        </p>
+        <p>
+          Add a third paragraph if you like — maybe a fun fact, a hobby, or a value
+          that drives you. Edit or delete freely in
+          <code>public/index.html</code>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Background ===== -->
+    <section id="background" class="section section-alt">
+      <div class="section-inner fade-in-up">
+        <h2>Background</h2>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-year">2024 — Present</span>
+            <h3>Job Title, Company Name</h3>
+            <p>A short placeholder description of this role or chapter of your life.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">2021 — 2024</span>
+            <h3>Job Title, Company Name</h3>
+            <p>A short placeholder description of this role or chapter of your life.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">2017 — 2021</span>
+            <h3>Degree, University Name</h3>
+            <p>A short placeholder description of what you studied or focused on.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-year">Earlier</span>
+            <h3>Where it all started</h3>
+            <p>A short placeholder description — add as many entries as you need.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Resume ===== -->
+    <section id="resume" class="section">
+      <div class="section-inner fade-in-up">
+        <h2>Resume</h2>
+        <p>Download my full resume, or see a few highlights below.</p>
+        <a href="/resume.pdf" class="btn btn-gradient" download>Download Resume</a>
+
+        <ul class="highlights">
+          <li><strong>Highlight one</strong> — a short line about an achievement or skill.</li>
+          <li><strong>Highlight two</strong> — a short line about an achievement or skill.</li>
+          <li><strong>Highlight three</strong> — a short line about an achievement or skill.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Photos ===== -->
+    <section id="photos" class="section section-alt">
+      <div class="section-inner fade-in-up">
+        <h2>Photos</h2>
+        <p>A few snapshots — click any photo to view it larger.</p>
+        <div class="photo-grid">
+          <button class="photo-item" data-full="/photos/photo1.jpg">
+            <img src="/photos/photo1.jpg" alt="Photo 1" loading="lazy" />
+          </button>
+          <button class="photo-item" data-full="/photos/photo2.jpg">
+            <img src="/photos/photo2.jpg" alt="Photo 2" loading="lazy" />
+          </button>
+          <button class="photo-item" data-full="/photos/photo3.jpg">
+            <img src="/photos/photo3.jpg" alt="Photo 3" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <div class="section-inner fade-in-up">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out — I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:you@example.com" class="btn btn-outline">you@example.com</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name. Built with Node.js &amp; Express.</p>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
