@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nolan Cox — Bulletin Board</title>
+  <meta name="description" content="Personal website of Nolan Cox — click around the bulletin board to explore." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Patrick+Hand&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="board.css" />
+</head>
+<body class="board-page">
+
+  <main class="board-wrap">
+    <p class="board-hint">Click anything pinned to the board to explore.</p>
+
+    <div class="board" id="board">
+      <img src="bulletin-board.jpg" alt="A cork bulletin board titled Nolan Cox, covered with notes, photos, and stickers" class="board-img" width="1312" height="1199" />
+
+      <!-- Hotspots: positions are percentages of the board image. -->
+      <a href="about.html" class="hotspot" style="left:3%;top:17%;width:22.5%;height:23%;" data-label="Who is Nolan?">
+        <span class="sr-only">Who is Nolan? — About me</span>
+      </a>
+      <a href="photos.html" class="hotspot" style="left:25.5%;top:19%;width:20.5%;height:25.5%;" data-label="Photos">
+        <span class="sr-only">Mountain photo — Photos</span>
+      </a>
+      <a href="resume.html" class="hotspot" style="left:46.5%;top:19.5%;width:27%;height:32%;" data-label="Resume">
+        <span class="sr-only">Resume</span>
+      </a>
+      <a href="background.html#education" class="hotspot" style="left:75.5%;top:14.5%;width:22.5%;height:20%;" data-label="Oklahoma State">
+        <span class="sr-only">Oklahoma State — Education</span>
+      </a>
+      <a href="photos.html" class="hotspot" style="left:6%;top:43%;width:23.5%;height:28.5%;" data-label="Photos">
+        <span class="sr-only">Wedding photo — Photos</span>
+      </a>
+      <a href="about.html#family" class="hotspot" style="left:32%;top:51%;width:21.5%;height:22%;" data-label="My why">
+        <span class="sr-only">Photo with my newborn — About me</span>
+      </a>
+      <a href="contact.html" class="hotspot" style="left:72%;top:36.5%;width:23.5%;height:36%;" data-label="Contact Nolan">
+        <span class="sr-only">Contact Nolan</span>
+      </a>
+      <a href="about.html" class="hotspot" style="left:15.5%;top:72%;width:22%;height:20.5%;" data-label="About me">
+        <span class="sr-only">Texas — About me</span>
+      </a>
+      <a href="background.html" class="hotspot" style="left:46.5%;top:68.5%;width:25%;height:26%;" data-label="Background in Sales">
+        <span class="sr-only">Nolan's background in sales</span>
+      </a>
+      <a href="photos.html" class="hotspot" style="left:78.5%;top:74%;width:14.5%;height:18%;" data-label="Photos">
+        <span class="sr-only">Bluebonnet — Photos</span>
+      </a>
+      <a href="../" class="hotspot" style="left:77.5%;top:92.5%;width:22.5%;height:7.5%;" data-label="Classic site">
+        <span class="sr-only">Switch to the classic site</span>
+      </a>
+    </div>
+
+    <nav class="board-quicklinks" aria-label="Sections">
+      <a href="about.html">About</a>
+      <a href="background.html">Background</a>
+      <a href="resume.html">Resume</a>
+      <a href="photos.html">Photos</a>
+      <a href="contact.html">Contact</a>
+      <a href="../" class="quicklink-alt">Classic site</a>
+    </nav>
+  </main>
+
+  <script src="board.js"></script>
+</body>
+</html>
